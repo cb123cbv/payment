@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>ITAEM</title>
+
+    <script src="/js/jquery-2.1.1.min.js"></script>
+
+
+</head>
+<body>
+<center>
+
+    <fieldset class="layui-elem-field">
+
+        <img src="http://imgsa.baidu.com/fso_article/pic/item/8644ebf81a4c510fc03ffe9b6b59252dd52aa5b3.jpg" height="100px">
+        <hr/>
+        <form>
+            <input type="text" placeholder="￥" name="money" id="money"/>
+            <button type="button" onclick="toPay()">支付</button>
+
+        </form>
+    </fieldset>
+</center>
+
+</body>
+<script type="text/javascript" th:inline="none">
+    function toPay() {
+
+      var money =  $("#money").val();
+      location.href="/pay/toPay?money="+money
+
+
+    }
+</script>
+</html>
